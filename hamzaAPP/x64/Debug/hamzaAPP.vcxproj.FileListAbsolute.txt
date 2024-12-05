@@ -1,0 +1,3 @@
+C:\Users\hp\OneDrive\Desktop\test\hamzaAPP\hamzaAPP\x64\Debug\hamzaAPP.vcxproj.AssemblyReference.cache
+C:\Users\hp\OneDrive\Desktop\test\hamzaAPP\hamzaAPP\x64\Debug\hamzaAPP.MyForm.resources
+C:\Users\hp\OneDrive\Desktop\test\hamzaAPP\hamzaAPP\x64\Debug\hamzaAPP.vcxproj.GenerateResource.cache
