@@ -14,29 +14,25 @@ namespace classApplication {
         MyForm(void)
         {
             InitializeComponent();
-            // Initialize persons list
+            // Initialize list
             persons = gcnew List<Person^>();
-            persons->Add(gcnew Person("Hamza", 20, "Étudiante"));
+            persons->Add(gcnew Person("Hamza", 20, "Étudiant"));
             persons->Add(gcnew Person("Khalide", 45, "Employé"));
             persons->Add(gcnew Person("Larbi", 40, "Professeur"));
             persons->Add(gcnew Person("Mohamed", 40, "Professeur"));
-
-            // Populate comboBox with persons' names
+            // Populate comboBox 
             for (int i = 0; i < persons->Count; i++)
             {
                 comboBox1->Items->Add(persons[i]->getName());
             }
-
             // Set default person index if available
             if (comboBox1->Items->Count > 0)
             {
                 comboBox1->SelectedIndex = 0;
             }
-
             // Display details for the selected person
             UpdateDetailsLabel();
         }
-
     protected:
         ~MyForm()
         {
@@ -45,7 +41,6 @@ namespace classApplication {
                 delete components;
             }
         }
-
     private:
         List<Person^>^ persons;
         int selectedPersonIndex;
@@ -60,10 +55,10 @@ namespace classApplication {
         System::Windows::Forms::TextBox^ textBox3;
         System::Windows::Forms::Button^ button1;
         System::Windows::Forms::ComboBox^ comboBox1;
+        System::Windows::Forms::Label^ labelDetails;
         System::Windows::Forms::Label^ label4;
-    private: System::Windows::Forms::Button^ button2;
-           System::Windows::Forms::Label^ labelDetails;
-
+    private: 
+        System::Windows::Forms::Button^ button2;
     private:
 #pragma region Windows Form Designer generated code
         void InitializeComponent(void)
@@ -80,60 +75,46 @@ namespace classApplication {
             this->labelDetails = (gcnew System::Windows::Forms::Label());
             this->button2 = (gcnew System::Windows::Forms::Button());
             this->SuspendLayout();
-            // 
             // label1
-            // 
             this->label1->AutoSize = true;
             this->label1->Location = System::Drawing::Point(495, 35);
             this->label1->Name = L"label1";
             this->label1->Size = System::Drawing::Size(51, 20);
             this->label1->TabIndex = 0;
             this->label1->Text = L"Name";
-            // 
             // label2
-            // 
             this->label2->AutoSize = true;
             this->label2->Location = System::Drawing::Point(495, 131);
             this->label2->Name = L"label2";
             this->label2->Size = System::Drawing::Size(38, 20);
             this->label2->TabIndex = 1;
             this->label2->Text = L"Age";
-            // 
             // label3
-            // 
             this->label3->AutoSize = true;
             this->label3->Location = System::Drawing::Point(508, 212);
             this->label3->Name = L"label3";
             this->label3->Size = System::Drawing::Size(43, 20);
             this->label3->TabIndex = 2;
             this->label3->Text = L"Type";
-            // 
             // textBox1
-            // 
             this->textBox1->Location = System::Drawing::Point(562, 35);
             this->textBox1->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
             this->textBox1->Name = L"textBox1";
             this->textBox1->Size = System::Drawing::Size(224, 26);
             this->textBox1->TabIndex = 3;
-            // 
             // textBox2
-            // 
             this->textBox2->Location = System::Drawing::Point(562, 125);
             this->textBox2->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
             this->textBox2->Name = L"textBox2";
             this->textBox2->Size = System::Drawing::Size(224, 26);
             this->textBox2->TabIndex = 4;
-            // 
             // textBox3
-            // 
-            this->textBox3->Location = System::Drawing::Point(574, 212);
+            this->textBox3->Location = System::Drawing::Point(562, 212);
             this->textBox3->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
             this->textBox3->Name = L"textBox3";
             this->textBox3->Size = System::Drawing::Size(224, 26);
             this->textBox3->TabIndex = 5;
-            // 
             // button1
-            // 
             this->button1->Location = System::Drawing::Point(574, 286);
             this->button1->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
             this->button1->Name = L"button1";
@@ -141,9 +122,7 @@ namespace classApplication {
             this->button1->TabIndex = 6;
             this->button1->Text = L"Add Person";
             this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
-            // 
             // comboBox1
-            // 
             this->comboBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
             this->comboBox1->Location = System::Drawing::Point(22, 35);
             this->comboBox1->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
@@ -151,18 +130,14 @@ namespace classApplication {
             this->comboBox1->Size = System::Drawing::Size(337, 37);
             this->comboBox1->TabIndex = 7;
             this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::comboBox1_SelectedIndexChanged);
-            // 
-            // label4
-            // 
+            // label4 
             this->label4->AutoSize = true;
             this->label4->Location = System::Drawing::Point(18, 11);
             this->label4->Name = L"label4";
             this->label4->Size = System::Drawing::Size(121, 20);
             this->label4->TabIndex = 8;
             this->label4->Text = L"Select a Person";
-            // 
             // labelDetails
-            // 
             this->labelDetails->AutoSize = true;
             this->labelDetails->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
             this->labelDetails->Location = System::Drawing::Point(30, 76);
@@ -171,9 +146,8 @@ namespace classApplication {
             this->labelDetails->TabIndex = 9;
             this->labelDetails->Text = L"Details:";
             this->labelDetails->Click += gcnew System::EventHandler(this, &MyForm::labelDetails_Click);
-            // 
+           
             // button2
-            // 
             this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14));
             this->button2->Location = System::Drawing::Point(22, 344);
             this->button2->Name = L"button2";
@@ -216,7 +190,6 @@ namespace classApplication {
                 MessageBox::Show("Please fill all fields.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
                 return;
             }
-
             try
             {
                 String^ name = textBox1->Text;

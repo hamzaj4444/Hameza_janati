@@ -1,3 +1,9 @@
 C:\Users\hp\OneDrive\Desktop\test\hamzaAPP\hamzaAPP\x64\Debug\hamzaAPP.vcxproj.AssemblyReference.cache
 C:\Users\hp\OneDrive\Desktop\test\hamzaAPP\hamzaAPP\x64\Debug\hamzaAPP.MyForm.resources
 C:\Users\hp\OneDrive\Desktop\test\hamzaAPP\hamzaAPP\x64\Debug\hamzaAPP.vcxproj.GenerateResource.cache
+C:\hamzaAPP\hamzaAPP\x64\Debug\hamzaAPP.vcxproj.AssemblyReference.cache
+C:\hamzaAPP\hamzaAPP\x64\Debug\hamzaAPP.MyForm.resources
+C:\hamzaAPP\hamzaAPP\x64\Debug\hamzaAPP.vcxproj.GenerateResource.cache
+C:\Poo\hamzaAPP\hamzaAPP\x64\Debug\hamzaAPP.vcxproj.AssemblyReference.cache
+C:\Poo\hamzaAPP\hamzaAPP\x64\Debug\hamzaAPP.MyForm.resources
+C:\Poo\hamzaAPP\hamzaAPP\x64\Debug\hamzaAPP.vcxproj.GenerateResource.cache
